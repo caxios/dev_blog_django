@@ -8,8 +8,8 @@ urlpatterns = [
     path('', include('main_page.urls')),
 ]
 
-if settings.DEBUG:
-    # Save images or media files to 'settings.MEDIA_ROOT', which are uploaded from admin site.
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# Save images or media files to 'settings.MEDIA_ROOT', which are uploaded from admin site.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     
