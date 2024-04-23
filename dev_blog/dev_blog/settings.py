@@ -10,23 +10,24 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from pathlib import Path
 import os
-import my_settings
+# import my_settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = my_settings.BASE_DIR
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = my_settings.SECRET_KEY
+SECRET_KEY = 'django-insecure-b80+#0#5_74a_&h8!bw4%9_75lir@fb3$#1gn1_t15uwpv(g20'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = my_settings.DEBUG
+DEBUG = False
 
-ALLOWED_HOSTS = my_settings.ALLOWED_HOSTS
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
